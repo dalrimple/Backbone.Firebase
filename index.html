@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+		<title>BSS</title>
+		<meta name='description' content=''>
+		<meta name='viewport' content='width=device-width'>
+	</head>
+	<body>
+		<h1>BSS</h1>
+		
+		<div id='login'>
+			<div data-out>
+				<a href='https://api.singly.com/oauth/authenticate?client_id=65ab7caa42476b137e5703bf1ad2e876&redirect_uri=http%3A%2F%2Fbss.dev%2Fauth&service=twitter&response_type=token'><!--img src='http://assets.singly.com/service-icons/24px/twitter.png' alt='Twitter Login' /-->Twitter</a>
+				<a href='https://api.singly.com/oauth/authenticate?client_id=65ab7caa42476b137e5703bf1ad2e876&redirect_uri=http%3A%2F%2Fbss.dev%2Fauth&service=gmail&response_type=token'><!--img src='http://assets.singly.com/service-icons/24px/gmail.png' alt='Gmail Login' /-->Gmail</a>
+			</div>
+			<div data-in>
+				<input type='button' value='logout' />
+			</div>
+			<span class='errors'></span>
+			<a href='#' id='profile'>get profile</a>
+		</div>
+
+		<hr />
+
+		<div id='sandbox'>
+			<input type='button' data-fn='save' value='Save new data to /sandbox' />
+			<input type='button' data-fn='fetch' value='Fetch data from /sandbox' />
+			<input type='button' data-fn='update' value='Update changes to model' />
+			<input type='button' data-fn='push' value='Push new child to /sandbox' />
+			<input type='button' data-fn='delete' value='Remove the new child from /sandbox' />
+			<input type='text' data-value='priority' />
+			<input type='button' data-fn='priority' value='Set priority' />
+		</div>
+
+		<hr />
+
+		<div id='sandboxes'>
+			<ul>
+			</ul>
+		</div>
+
+		<hr />
+
+		<div id='output' style='border:1px solid #DDD; padding: 8px;'></div>
+		<input type='text' id='profileName' />
+		<input type='text' id='profileRole' />
+		<a href='#' id='profileSave'>save</a>
+		<script type='text/javascript' data-main='/_js/main.js' src='//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.4/require.min.js'></script>
+	</body>
+</html>
